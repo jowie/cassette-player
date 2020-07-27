@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4AB9908D24CAFD4B00AF21D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB9908C24CAFD4B00AF21D5 /* AppDelegate.swift */; };
+		4AB9908F24CAFD4B00AF21D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB9908E24CAFD4B00AF21D5 /* ContentView.swift */; };
+		4AB9909124CAFD4C00AF21D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB9909024CAFD4C00AF21D5 /* Assets.xcassets */; };
+		4AB9909424CAFD4C00AF21D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB9909324CAFD4C00AF21D5 /* Preview Assets.xcassets */; };
+		4AB9909724CAFD4C00AF21D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB9909524CAFD4C00AF21D5 /* Main.storyboard */; };
+		4AB990A324CAFD4C00AF21D5 /* CassettePlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990A224CAFD4C00AF21D5 /* CassettePlayerTests.swift */; };
+		4AB990AE24CAFD8500AF21D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990AD24CAFD8500AF21D5 /* ViewController.swift */; };
+		4AB990B024CAFD8C00AF21D5 /* CassetteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990AF24CAFD8C00AF21D5 /* CassetteView.swift */; };
+		4AB990B224CAFD9100AF21D5 /* Cassette+RenderSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990B124CAFD9100AF21D5 /* Cassette+RenderSpecification.swift */; };
+		4AB990B424CAFD9C00AF21D5 /* archangel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AB990B324CAFD9C00AF21D5 /* archangel.mp3 */; };
+		4AB990B624CAFDCB00AF21D5 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990B524CAFDCB00AF21D5 /* AudioPlayer.swift */; };
+		4AB990B824CAFDD100AF21D5 /* Cassette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990B724CAFDD100AF21D5 /* Cassette.swift */; };
+		4AB990BF24CAFDED00AF21D5 /* TimeUnits+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990B924CAFDED00AF21D5 /* TimeUnits+Conversion.swift */; };
+		4AB990C024CAFDED00AF21D5 /* TimeUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BA24CAFDED00AF21D5 /* TimeUnits.swift */; };
+		4AB990C124CAFDED00AF21D5 /* Double+Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BB24CAFDED00AF21D5 /* Double+Points.swift */; };
+		4AB990C224CAFDED00AF21D5 /* Int+Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BC24CAFDED00AF21D5 /* Int+Frames.swift */; };
+		4AB990C324CAFDED00AF21D5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BD24CAFDED00AF21D5 /* Player.swift */; };
+		4AB990C424CAFDED00AF21D5 /* TimeInterval+Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BE24CAFDED00AF21D5 /* TimeInterval+Units.swift */; };
+		4AE0653124CEC24700A42A4F /* RenderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4AB9909F24CAFD4C00AF21D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4AB9908124CAFD4B00AF21D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4AB9908824CAFD4B00AF21D5;
+			remoteInfo = CassettePlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4AB9908924CAFD4B00AF21D5 /* CassettePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CassettePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AB9908C24CAFD4B00AF21D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4AB9908E24CAFD4B00AF21D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4AB9909024CAFD4C00AF21D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4AB9909324CAFD4C00AF21D5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4AB9909624CAFD4C00AF21D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4AB9909824CAFD4C00AF21D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AB9909924CAFD4C00AF21D5 /* CassettePlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CassettePlayer.entitlements; sourceTree = "<group>"; };
+		4AB9909E24CAFD4C00AF21D5 /* CassettePlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CassettePlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AB990A224CAFD4C00AF21D5 /* CassettePlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CassettePlayerTests.swift; sourceTree = "<group>"; };
+		4AB990A424CAFD4C00AF21D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AB990AD24CAFD8500AF21D5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4AB990AF24CAFD8C00AF21D5 /* CassetteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CassetteView.swift; sourceTree = "<group>"; };
+		4AB990B124CAFD9100AF21D5 /* Cassette+RenderSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cassette+RenderSpecification.swift"; sourceTree = "<group>"; };
+		4AB990B324CAFD9C00AF21D5 /* archangel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = archangel.mp3; sourceTree = "<group>"; };
+		4AB990B524CAFDCB00AF21D5 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		4AB990B724CAFDD100AF21D5 /* Cassette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cassette.swift; sourceTree = "<group>"; };
+		4AB990B924CAFDED00AF21D5 /* TimeUnits+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeUnits+Conversion.swift"; sourceTree = "<group>"; };
+		4AB990BA24CAFDED00AF21D5 /* TimeUnits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUnits.swift; sourceTree = "<group>"; };
+		4AB990BB24CAFDED00AF21D5 /* Double+Points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Points.swift"; sourceTree = "<group>"; };
+		4AB990BC24CAFDED00AF21D5 /* Int+Frames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Frames.swift"; sourceTree = "<group>"; };
+		4AB990BD24CAFDED00AF21D5 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		4AB990BE24CAFDED00AF21D5 /* TimeInterval+Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Units.swift"; sourceTree = "<group>"; };
+		4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderConfiguration.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AB9908624CAFD4B00AF21D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AB9909B24CAFD4C00AF21D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4AB9908024CAFD4B00AF21D5 = {
+			isa = PBXGroup;
+			children = (
+				4AB9908B24CAFD4B00AF21D5 /* CassettePlayer */,
+				4AB990A124CAFD4C00AF21D5 /* CassettePlayerTests */,
+				4AB9908A24CAFD4B00AF21D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4AB9908A24CAFD4B00AF21D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4AB9908924CAFD4B00AF21D5 /* CassettePlayer.app */,
+				4AB9909E24CAFD4C00AF21D5 /* CassettePlayerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4AB9908B24CAFD4B00AF21D5 /* CassettePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				4AB9908C24CAFD4B00AF21D5 /* AppDelegate.swift */,
+				4AB9908E24CAFD4B00AF21D5 /* ContentView.swift */,
+				4AB990AF24CAFD8C00AF21D5 /* CassetteView.swift */,
+				4AB990B724CAFDD100AF21D5 /* Cassette.swift */,
+				4AB990B124CAFD9100AF21D5 /* Cassette+RenderSpecification.swift */,
+				4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */,
+				4AB990AD24CAFD8500AF21D5 /* ViewController.swift */,
+				4AB990B524CAFDCB00AF21D5 /* AudioPlayer.swift */,
+				4AB990BB24CAFDED00AF21D5 /* Double+Points.swift */,
+				4AB990BC24CAFDED00AF21D5 /* Int+Frames.swift */,
+				4AB990BD24CAFDED00AF21D5 /* Player.swift */,
+				4AB990BE24CAFDED00AF21D5 /* TimeInterval+Units.swift */,
+				4AB990BA24CAFDED00AF21D5 /* TimeUnits.swift */,
+				4AB990B924CAFDED00AF21D5 /* TimeUnits+Conversion.swift */,
+				4AB9909524CAFD4C00AF21D5 /* Main.storyboard */,
+				4AB9909824CAFD4C00AF21D5 /* Info.plist */,
+				4AE0653224CEC28D00A42A4F /* Resources */,
+				4AB9909924CAFD4C00AF21D5 /* CassettePlayer.entitlements */,
+				4AB9909224CAFD4C00AF21D5 /* Preview Content */,
+			);
+			path = CassettePlayer;
+			sourceTree = "<group>";
+		};
+		4AB9909224CAFD4C00AF21D5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4AB9909324CAFD4C00AF21D5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4AB990A124CAFD4C00AF21D5 /* CassettePlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4AB990A224CAFD4C00AF21D5 /* CassettePlayerTests.swift */,
+				4AB990A424CAFD4C00AF21D5 /* Info.plist */,
+			);
+			path = CassettePlayerTests;
+			sourceTree = "<group>";
+		};
+		4AE0653224CEC28D00A42A4F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4AB990B324CAFD9C00AF21D5 /* archangel.mp3 */,
+				4AB9909024CAFD4C00AF21D5 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4AB9908824CAFD4B00AF21D5 /* CassettePlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AB990A724CAFD4C00AF21D5 /* Build configuration list for PBXNativeTarget "CassettePlayer" */;
+			buildPhases = (
+				4AB9908524CAFD4B00AF21D5 /* Sources */,
+				4AB9908624CAFD4B00AF21D5 /* Frameworks */,
+				4AB9908724CAFD4B00AF21D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CassettePlayer;
+			productName = CassettePlayer;
+			productReference = 4AB9908924CAFD4B00AF21D5 /* CassettePlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4AB9909D24CAFD4C00AF21D5 /* CassettePlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4AB990AA24CAFD4C00AF21D5 /* Build configuration list for PBXNativeTarget "CassettePlayerTests" */;
+			buildPhases = (
+				4AB9909A24CAFD4C00AF21D5 /* Sources */,
+				4AB9909B24CAFD4C00AF21D5 /* Frameworks */,
+				4AB9909C24CAFD4C00AF21D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4AB990A024CAFD4C00AF21D5 /* PBXTargetDependency */,
+			);
+			name = CassettePlayerTests;
+			productName = CassettePlayerTests;
+			productReference = 4AB9909E24CAFD4C00AF21D5 /* CassettePlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4AB9908124CAFD4B00AF21D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Joe Nash";
+				TargetAttributes = {
+					4AB9908824CAFD4B00AF21D5 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					4AB9909D24CAFD4C00AF21D5 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 4AB9908824CAFD4B00AF21D5;
+					};
+				};
+			};
+			buildConfigurationList = 4AB9908424CAFD4B00AF21D5 /* Build configuration list for PBXProject "CassettePlayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4AB9908024CAFD4B00AF21D5;
+			productRefGroup = 4AB9908A24CAFD4B00AF21D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4AB9908824CAFD4B00AF21D5 /* CassettePlayer */,
+				4AB9909D24CAFD4C00AF21D5 /* CassettePlayerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4AB9908724CAFD4B00AF21D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AB990B424CAFD9C00AF21D5 /* archangel.mp3 in Resources */,
+				4AB9909724CAFD4C00AF21D5 /* Main.storyboard in Resources */,
+				4AB9909424CAFD4C00AF21D5 /* Preview Assets.xcassets in Resources */,
+				4AB9909124CAFD4C00AF21D5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AB9909C24CAFD4C00AF21D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4AB9908524CAFD4B00AF21D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AB990BF24CAFDED00AF21D5 /* TimeUnits+Conversion.swift in Sources */,
+				4AB990B024CAFD8C00AF21D5 /* CassetteView.swift in Sources */,
+				4AE0653124CEC24700A42A4F /* RenderConfiguration.swift in Sources */,
+				4AB990C424CAFDED00AF21D5 /* TimeInterval+Units.swift in Sources */,
+				4AB990B824CAFDD100AF21D5 /* Cassette.swift in Sources */,
+				4AB990AE24CAFD8500AF21D5 /* ViewController.swift in Sources */,
+				4AB990C324CAFDED00AF21D5 /* Player.swift in Sources */,
+				4AB990B224CAFD9100AF21D5 /* Cassette+RenderSpecification.swift in Sources */,
+				4AB990C224CAFDED00AF21D5 /* Int+Frames.swift in Sources */,
+				4AB9908F24CAFD4B00AF21D5 /* ContentView.swift in Sources */,
+				4AB9908D24CAFD4B00AF21D5 /* AppDelegate.swift in Sources */,
+				4AB990C124CAFDED00AF21D5 /* Double+Points.swift in Sources */,
+				4AB990C024CAFDED00AF21D5 /* TimeUnits.swift in Sources */,
+				4AB990B624CAFDCB00AF21D5 /* AudioPlayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AB9909A24CAFD4C00AF21D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AB990A324CAFD4C00AF21D5 /* CassettePlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4AB990A024CAFD4C00AF21D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4AB9908824CAFD4B00AF21D5 /* CassettePlayer */;
+			targetProxy = 4AB9909F24CAFD4C00AF21D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4AB9909524CAFD4C00AF21D5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4AB9909624CAFD4C00AF21D5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4AB990A524CAFD4C00AF21D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4AB990A624CAFD4C00AF21D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		4AB990A824CAFD4C00AF21D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CassettePlayer/CassettePlayer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"CassettePlayer/Preview Content\"";
+				DEVELOPMENT_TEAM = AFBSRK7ZWL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CassettePlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = net.jowie.app.CassettePlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		4AB990A924CAFD4C00AF21D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CassettePlayer/CassettePlayer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"CassettePlayer/Preview Content\"";
+				DEVELOPMENT_TEAM = AFBSRK7ZWL;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = CassettePlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = net.jowie.app.CassettePlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		4AB990AB24CAFD4C00AF21D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AFBSRK7ZWL;
+				INFOPLIST_FILE = CassettePlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = net.jowie.app.CassettePlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CassettePlayer.app/Contents/MacOS/CassettePlayer";
+			};
+			name = Debug;
+		};
+		4AB990AC24CAFD4C00AF21D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = AFBSRK7ZWL;
+				INFOPLIST_FILE = CassettePlayerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = net.jowie.app.CassettePlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CassettePlayer.app/Contents/MacOS/CassettePlayer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4AB9908424CAFD4B00AF21D5 /* Build configuration list for PBXProject "CassettePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AB990A524CAFD4C00AF21D5 /* Debug */,
+				4AB990A624CAFD4C00AF21D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AB990A724CAFD4C00AF21D5 /* Build configuration list for PBXNativeTarget "CassettePlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AB990A824CAFD4C00AF21D5 /* Debug */,
+				4AB990A924CAFD4C00AF21D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4AB990AA24CAFD4C00AF21D5 /* Build configuration list for PBXNativeTarget "CassettePlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4AB990AB24CAFD4C00AF21D5 /* Debug */,
+				4AB990AC24CAFD4C00AF21D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4AB9908124CAFD4B00AF21D5 /* Project object */;
+}
