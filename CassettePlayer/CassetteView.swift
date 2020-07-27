@@ -10,13 +10,27 @@ import SwiftUI
 
 struct CassetteView: View {
     var renderSpec: Cassette.RenderSpecification
+    let scale = RenderConfiguration.currentConfiguration.pointsPerMillimeter
     
     var body: some View {
-        HStack {
-            CassetteSpoolView(rotation: renderSpec.spoolRotationLeft, tapeRadius: renderSpec.spoolRadiusLeft)
-                .padding(50)
-            CassetteSpoolView(rotation: renderSpec.spoolRotationRight, tapeRadius: renderSpec.spoolRadiusRight)
-                .padding(50)
+        ZStack(alignment: .center) {
+            Rectangle()
+                .frame(
+                    width: CGFloat(CassetteDefinition.shellWidth) * scale.width,
+                    height: CGFloat(CassetteDefinition.shellHeight) * scale.height,
+                    alignment: .center)
+            CassetteSpoolView(
+                rotation: renderSpec.spoolRotationLeft,
+                tapeRadius: renderSpec.spoolRadiusLeft)
+                .offset(
+                    x: -CGFloat(CassetteDefinition.spoolDistance) * self.scale.width * 0.5,
+                    y: 0)
+            CassetteSpoolView(
+                rotation: renderSpec.spoolRotationRight,
+                tapeRadius: renderSpec.spoolRadiusRight)
+                .offset(
+                    x: CGFloat(CassetteDefinition.spoolDistance) * self.scale.width * 0.5,
+                    y: 0)
         }
     }
 }
@@ -28,22 +42,30 @@ struct CassetteSpoolView: View {
 
     var body: some View {
         ZStack {
+            VStack(alignment: .center) {
             Image("tape")
                 .resizable()
+                .scaledToFit()
                 .frame(width: tapeRadius * 2 * scale.width,
-                       height: tapeRadius * 2 * scale.height)
+                       height: tapeRadius * 2 * scale.height,
+                       alignment: .center)
+            }
+            VStack(alignment: .center) {
             Image("spool")
                 .resizable()
                 .scaledToFit()
                 .frame(width: CGFloat(CassetteDefinition.spoolRadius) * 2 * scale.width,
-                       height: CGFloat(CassetteDefinition.spoolRadius) * 2 * scale.height)
+                       height: CGFloat(CassetteDefinition.spoolRadius) * 2 * scale.height,
+                       alignment: .center)
                 .rotationEffect(rotation)
+            }
         }
     }
 }
 
-struct CassettePlayground_Previews: PreviewProvider {
+struct CassetteView_Previews: PreviewProvider {
     static var previews: some View {
-        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+        CassetteView(
+            renderSpec: Cassette(type: .C90).currentRenderSpecification())
     }
 }

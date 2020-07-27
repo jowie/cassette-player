@@ -43,14 +43,9 @@ extension Cassette {
 
         let tapeLayersLeft = tapeRadiusLeft / thickness
         let tapeLayersRight = tapeRadiusRight / thickness
-        print(tapeLayersLeft, tapeLayersRight)
 
         let tapeRotationLeft = tapeLayersLeft * .pi * 2
         let tapeRotationRight = tapeLayersRight * .pi * 2
-
-        print("totalRadiusLeft: \(totalRadiusLeft)")
-        print("pointsPerMillimeter: \(RenderConfiguration.currentConfiguration.pointsPerMillimeter)")
-        print("scale: \(CGFloat(totalRadiusLeft) * 2 * RenderConfiguration.currentConfiguration.pointsPerMillimeter.width)")
 
         return .init(
             spoolRadiusLeft: .init(totalRadiusLeft),

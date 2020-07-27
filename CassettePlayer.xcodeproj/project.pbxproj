@@ -13,7 +13,6 @@
 		4AB9909424CAFD4C00AF21D5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB9909324CAFD4C00AF21D5 /* Preview Assets.xcassets */; };
 		4AB9909724CAFD4C00AF21D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AB9909524CAFD4C00AF21D5 /* Main.storyboard */; };
 		4AB990A324CAFD4C00AF21D5 /* CassettePlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990A224CAFD4C00AF21D5 /* CassettePlayerTests.swift */; };
-		4AB990AE24CAFD8500AF21D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990AD24CAFD8500AF21D5 /* ViewController.swift */; };
 		4AB990B024CAFD8C00AF21D5 /* CassetteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990AF24CAFD8C00AF21D5 /* CassetteView.swift */; };
 		4AB990B224CAFD9100AF21D5 /* Cassette+RenderSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990B124CAFD9100AF21D5 /* Cassette+RenderSpecification.swift */; };
 		4AB990B424CAFD9C00AF21D5 /* archangel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AB990B324CAFD9C00AF21D5 /* archangel.mp3 */; };
@@ -26,6 +25,7 @@
 		4AB990C324CAFDED00AF21D5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BD24CAFDED00AF21D5 /* Player.swift */; };
 		4AB990C424CAFDED00AF21D5 /* TimeInterval+Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BE24CAFDED00AF21D5 /* TimeInterval+Units.swift */; };
 		4AE0653124CEC24700A42A4F /* RenderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */; };
+		4AE0659024CEF07800A42A4F /* Double+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0658F24CEF07800A42A4F /* Double+Distance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,6 @@
 		4AB9909E24CAFD4C00AF21D5 /* CassettePlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CassettePlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB990A224CAFD4C00AF21D5 /* CassettePlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CassettePlayerTests.swift; sourceTree = "<group>"; };
 		4AB990A424CAFD4C00AF21D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4AB990AD24CAFD8500AF21D5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4AB990AF24CAFD8C00AF21D5 /* CassetteView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CassetteView.swift; sourceTree = "<group>"; };
 		4AB990B124CAFD9100AF21D5 /* Cassette+RenderSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cassette+RenderSpecification.swift"; sourceTree = "<group>"; };
 		4AB990B324CAFD9C00AF21D5 /* archangel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = archangel.mp3; sourceTree = "<group>"; };
@@ -63,6 +62,7 @@
 		4AB990BD24CAFDED00AF21D5 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		4AB990BE24CAFDED00AF21D5 /* TimeInterval+Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Units.swift"; sourceTree = "<group>"; };
 		4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderConfiguration.swift; sourceTree = "<group>"; };
+		4AE0658F24CEF07800A42A4F /* Double+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Distance.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,16 +109,15 @@
 				4AB990AF24CAFD8C00AF21D5 /* CassetteView.swift */,
 				4AB990B724CAFDD100AF21D5 /* Cassette.swift */,
 				4AB990B124CAFD9100AF21D5 /* Cassette+RenderSpecification.swift */,
-				4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */,
-				4AB990AD24CAFD8500AF21D5 /* ViewController.swift */,
-				4AB990B524CAFDCB00AF21D5 /* AudioPlayer.swift */,
 				4AB990BB24CAFDED00AF21D5 /* Double+Points.swift */,
+				4AE0658F24CEF07800A42A4F /* Double+Distance.swift */,
 				4AB990BC24CAFDED00AF21D5 /* Int+Frames.swift */,
+				4AB990B524CAFDCB00AF21D5 /* AudioPlayer.swift */,
 				4AB990BD24CAFDED00AF21D5 /* Player.swift */,
 				4AB990BE24CAFDED00AF21D5 /* TimeInterval+Units.swift */,
 				4AB990BA24CAFDED00AF21D5 /* TimeUnits.swift */,
 				4AB990B924CAFDED00AF21D5 /* TimeUnits+Conversion.swift */,
-				4AB9909524CAFD4C00AF21D5 /* Main.storyboard */,
+				4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */,
 				4AB9909824CAFD4C00AF21D5 /* Info.plist */,
 				4AE0653224CEC28D00A42A4F /* Resources */,
 				4AB9909924CAFD4C00AF21D5 /* CassettePlayer.entitlements */,
@@ -147,6 +146,7 @@
 		4AE0653224CEC28D00A42A4F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4AB9909524CAFD4C00AF21D5 /* Main.storyboard */,
 				4AB990B324CAFD9C00AF21D5 /* archangel.mp3 */,
 				4AB9909024CAFD4C00AF21D5 /* Assets.xcassets */,
 			);
@@ -260,13 +260,13 @@
 				4AE0653124CEC24700A42A4F /* RenderConfiguration.swift in Sources */,
 				4AB990C424CAFDED00AF21D5 /* TimeInterval+Units.swift in Sources */,
 				4AB990B824CAFDD100AF21D5 /* Cassette.swift in Sources */,
-				4AB990AE24CAFD8500AF21D5 /* ViewController.swift in Sources */,
 				4AB990C324CAFDED00AF21D5 /* Player.swift in Sources */,
 				4AB990B224CAFD9100AF21D5 /* Cassette+RenderSpecification.swift in Sources */,
 				4AB990C224CAFDED00AF21D5 /* Int+Frames.swift in Sources */,
 				4AB9908F24CAFD4B00AF21D5 /* ContentView.swift in Sources */,
 				4AB9908D24CAFD4B00AF21D5 /* AppDelegate.swift in Sources */,
 				4AB990C124CAFDED00AF21D5 /* Double+Points.swift in Sources */,
+				4AE0659024CEF07800A42A4F /* Double+Distance.swift in Sources */,
 				4AB990C024CAFDED00AF21D5 /* TimeUnits.swift in Sources */,
 				4AB990B624CAFDCB00AF21D5 /* AudioPlayer.swift in Sources */,
 			);

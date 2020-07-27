@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var cassette = Cassette(type: .C90)
+    @ObservedObject var cassette = Cassette(type: .C90)
 
     var body: some View {
         CassetteView(renderSpec: cassette.currentRenderSpecification())
@@ -24,6 +24,8 @@ struct ContentView: View {
             print(error)
         }
 
+        cassette.playbackPosition = 20.minutes
+
 //        let cassette = Cassette(type: .C90)
 //        cassette.side = .B
 //        cassette.playbackPosition = 0.minutes
@@ -32,6 +34,9 @@ struct ContentView: View {
 //        print(renderSpec.spoolRadiusRight)
 //        print(renderSpec.spoolRotationLeft)
 //        print(renderSpec.spoolRotationRight)
+
+        print(cassette.currentRenderSpecification().spoolRadiusLeft)
+
     }
 }
 
