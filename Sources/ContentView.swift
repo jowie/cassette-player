@@ -24,7 +24,14 @@ struct ContentView: View {
             print(error)
         }
 
-        cassette.playbackPosition = 20.minutes
+        let startDate = Date()
+
+        Timer.scheduledTimer(withTimeInterval: 1.0 / FPS.default, repeats: true) { (t) in
+            let ti = Date().timeIntervalSince(startDate)
+            self.cassette.playbackPosition = ti
+        }
+
+//        cassette.playbackPosition = CassetteDefinition.C90.tapeDuration
 
 //        let cassette = Cassette(type: .C90)
 //        cassette.side = .B

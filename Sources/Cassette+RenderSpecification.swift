@@ -16,8 +16,8 @@ extension Cassette {
     struct RenderSpecification {
         let spoolRadiusLeft: CGFloat
         let spoolRadiusRight: CGFloat
-        let spoolRotationLeft: Angle
-        let spoolRotationRight: Angle
+        let spoolRotationLeft: Double
+        let spoolRotationRight: Double
     }
 
     func currentRenderSpecification(isFlipped: Bool = false) -> RenderSpecification {
@@ -50,7 +50,7 @@ extension Cassette {
         return .init(
             spoolRadiusLeft: .init(totalRadiusLeft),
             spoolRadiusRight: .init(totalRadiusRight),
-            spoolRotationLeft: .init(radians: tapeRotationLeft),
-            spoolRotationRight: .init(radians: tapeRotationRight))
+            spoolRotationLeft: .init(tapeRotationLeft),
+            spoolRotationRight: .init(tapeRotationRight))
     }
 }

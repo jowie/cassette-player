@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A23559824D1775A00612C9F /* YotiFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 4A23559724D1775A00612C9F /* YotiFoundation */; };
 		4AB9908D24CAFD4B00AF21D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB9908C24CAFD4B00AF21D5 /* AppDelegate.swift */; };
 		4AB9908F24CAFD4B00AF21D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB9908E24CAFD4B00AF21D5 /* ContentView.swift */; };
 		4AB9909124CAFD4C00AF21D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB9909024CAFD4C00AF21D5 /* Assets.xcassets */; };
@@ -18,8 +19,6 @@
 		4AB990B424CAFD9C00AF21D5 /* archangel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4AB990B324CAFD9C00AF21D5 /* archangel.mp3 */; };
 		4AB990B624CAFDCB00AF21D5 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990B524CAFDCB00AF21D5 /* AudioPlayer.swift */; };
 		4AB990B824CAFDD100AF21D5 /* Cassette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990B724CAFDD100AF21D5 /* Cassette.swift */; };
-		4AB990BF24CAFDED00AF21D5 /* TimeUnits+Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990B924CAFDED00AF21D5 /* TimeUnits+Conversion.swift */; };
-		4AB990C024CAFDED00AF21D5 /* TimeUnits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BA24CAFDED00AF21D5 /* TimeUnits.swift */; };
 		4AB990C124CAFDED00AF21D5 /* Double+Points.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BB24CAFDED00AF21D5 /* Double+Points.swift */; };
 		4AB990C224CAFDED00AF21D5 /* Int+Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BC24CAFDED00AF21D5 /* Int+Frames.swift */; };
 		4AB990C324CAFDED00AF21D5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BD24CAFDED00AF21D5 /* Player.swift */; };
@@ -55,14 +54,13 @@
 		4AB990B324CAFD9C00AF21D5 /* archangel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = archangel.mp3; sourceTree = "<group>"; };
 		4AB990B524CAFDCB00AF21D5 /* AudioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
 		4AB990B724CAFDD100AF21D5 /* Cassette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cassette.swift; sourceTree = "<group>"; };
-		4AB990B924CAFDED00AF21D5 /* TimeUnits+Conversion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeUnits+Conversion.swift"; sourceTree = "<group>"; };
-		4AB990BA24CAFDED00AF21D5 /* TimeUnits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeUnits.swift; sourceTree = "<group>"; };
 		4AB990BB24CAFDED00AF21D5 /* Double+Points.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Points.swift"; sourceTree = "<group>"; };
 		4AB990BC24CAFDED00AF21D5 /* Int+Frames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Frames.swift"; sourceTree = "<group>"; };
 		4AB990BD24CAFDED00AF21D5 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		4AB990BE24CAFDED00AF21D5 /* TimeInterval+Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Units.swift"; sourceTree = "<group>"; };
 		4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderConfiguration.swift; sourceTree = "<group>"; };
 		4AE0658F24CEF07800A42A4F /* Double+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Distance.swift"; sourceTree = "<group>"; };
+		4AE065C024CF4E7A00A42A4F /* YotiFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YotiFoundation.framework; path = ../Carthage/Build/macOS/YotiFoundation.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A23559824D1775A00612C9F /* YotiFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +85,8 @@
 		4AB9908024CAFD4B00AF21D5 = {
 			isa = PBXGroup;
 			children = (
-				4AB9908B24CAFD4B00AF21D5 /* CassettePlayer */,
+				4AE065C224CF4E8700A42A4F /* Frameworks */,
+				4AB9908B24CAFD4B00AF21D5 /* Sources */,
 				4AB990A124CAFD4C00AF21D5 /* CassettePlayerTests */,
 				4AB9908A24CAFD4B00AF21D5 /* Products */,
 			);
@@ -101,7 +101,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4AB9908B24CAFD4B00AF21D5 /* CassettePlayer */ = {
+		4AB9908B24CAFD4B00AF21D5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				4AB9908C24CAFD4B00AF21D5 /* AppDelegate.swift */,
@@ -115,15 +115,13 @@
 				4AB990B524CAFDCB00AF21D5 /* AudioPlayer.swift */,
 				4AB990BD24CAFDED00AF21D5 /* Player.swift */,
 				4AB990BE24CAFDED00AF21D5 /* TimeInterval+Units.swift */,
-				4AB990BA24CAFDED00AF21D5 /* TimeUnits.swift */,
-				4AB990B924CAFDED00AF21D5 /* TimeUnits+Conversion.swift */,
 				4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */,
 				4AB9909824CAFD4C00AF21D5 /* Info.plist */,
 				4AE0653224CEC28D00A42A4F /* Resources */,
 				4AB9909924CAFD4C00AF21D5 /* CassettePlayer.entitlements */,
 				4AB9909224CAFD4C00AF21D5 /* Preview Content */,
 			);
-			path = CassettePlayer;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		4AB9909224CAFD4C00AF21D5 /* Preview Content */ = {
@@ -153,6 +151,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		4AE065C224CF4E8700A42A4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AE065C024CF4E7A00A42A4F /* YotiFoundation.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -169,6 +175,9 @@
 			dependencies = (
 			);
 			name = CassettePlayer;
+			packageProductDependencies = (
+				4A23559724D1775A00612C9F /* YotiFoundation */,
+			);
 			productName = CassettePlayer;
 			productReference = 4AB9908924CAFD4B00AF21D5 /* CassettePlayer.app */;
 			productType = "com.apple.product-type.application";
@@ -219,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 4AB9908024CAFD4B00AF21D5;
+			packageReferences = (
+				4A23559424D175C700612C9F /* XCRemoteSwiftPackageReference "yoti-foundation-ios" */,
+			);
 			productRefGroup = 4AB9908A24CAFD4B00AF21D5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -255,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AB990BF24CAFDED00AF21D5 /* TimeUnits+Conversion.swift in Sources */,
 				4AB990B024CAFD8C00AF21D5 /* CassetteView.swift in Sources */,
 				4AE0653124CEC24700A42A4F /* RenderConfiguration.swift in Sources */,
 				4AB990C424CAFDED00AF21D5 /* TimeInterval+Units.swift in Sources */,
@@ -267,7 +278,6 @@
 				4AB9908D24CAFD4B00AF21D5 /* AppDelegate.swift in Sources */,
 				4AB990C124CAFDED00AF21D5 /* Double+Points.swift in Sources */,
 				4AE0659024CEF07800A42A4F /* Double+Distance.swift in Sources */,
-				4AB990C024CAFDED00AF21D5 /* TimeUnits.swift in Sources */,
 				4AB990B624CAFDCB00AF21D5 /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,14 +429,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CassettePlayer/CassettePlayer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/CassettePlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"CassettePlayer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Sources/Preview Content\"";
 				DEVELOPMENT_TEAM = AFBSRK7ZWL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = CassettePlayer/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -442,14 +456,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = CassettePlayer/CassettePlayer.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Sources/CassettePlayer.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"CassettePlayer/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Sources/Preview Content\"";
 				DEVELOPMENT_TEAM = AFBSRK7ZWL;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = CassettePlayer/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -536,6 +554,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A23559424D175C700612C9F /* XCRemoteSwiftPackageReference "yoti-foundation-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:lampkicking/yoti-foundation-ios.git";
+			requirement = {
+				branch = "subtask/YM-19299_SwiftPackage";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A23559724D1775A00612C9F /* YotiFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A23559424D175C700612C9F /* XCRemoteSwiftPackageReference "yoti-foundation-ios" */;
+			productName = YotiFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4AB9908124CAFD4B00AF21D5 /* Project object */;
 }

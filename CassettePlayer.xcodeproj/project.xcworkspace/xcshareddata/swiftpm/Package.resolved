@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "YotiFoundation",
+        "repositoryURL": "git@github.com:lampkicking/yoti-foundation-ios.git",
+        "state": {
+          "branch": "subtask/YM-19299_SwiftPackage",
+          "revision": "9408af83d37b136ba3a5bf2f5e959208af07ad61",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

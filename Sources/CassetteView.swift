@@ -20,13 +20,13 @@ struct CassetteView: View {
                     height: CGFloat(CassetteDefinition.shellHeight) * scale.height,
                     alignment: .center)
             CassetteSpoolView(
-                rotation: renderSpec.spoolRotationLeft,
+                rotation: Angle(radians: renderSpec.spoolRotationLeft + .pi),
                 tapeRadius: renderSpec.spoolRadiusLeft)
                 .offset(
                     x: -CGFloat(CassetteDefinition.spoolDistance) * self.scale.width * 0.5,
                     y: 0)
             CassetteSpoolView(
-                rotation: renderSpec.spoolRotationRight,
+                rotation: Angle(radians: -renderSpec.spoolRotationRight),
                 tapeRadius: renderSpec.spoolRadiusRight)
                 .offset(
                     x: CGFloat(CassetteDefinition.spoolDistance) * self.scale.width * 0.5,
@@ -36,8 +36,8 @@ struct CassetteView: View {
 }
 
 struct CassetteSpoolView: View {
-    var rotation: Angle
-    var tapeRadius: CGFloat
+    let rotation: Angle
+    let tapeRadius: CGFloat
     let scale = RenderConfiguration.currentConfiguration.pointsPerMillimeter
 
     var body: some View {
@@ -45,7 +45,6 @@ struct CassetteSpoolView: View {
             VStack(alignment: .center) {
             Image("tape")
                 .resizable()
-                .scaledToFit()
                 .frame(width: tapeRadius * 2 * scale.width,
                        height: tapeRadius * 2 * scale.height,
                        alignment: .center)
@@ -53,7 +52,6 @@ struct CassetteSpoolView: View {
             VStack(alignment: .center) {
             Image("spool")
                 .resizable()
-                .scaledToFit()
                 .frame(width: CGFloat(CassetteDefinition.spoolRadius) * 2 * scale.width,
                        height: CGFloat(CassetteDefinition.spoolRadius) * 2 * scale.height,
                        alignment: .center)
