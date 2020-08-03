@@ -12,37 +12,28 @@ struct ContentView: View {
     @ObservedObject var cassette = Cassette(type: .C90)
 
     var body: some View {
-        CassetteView(renderSpec: cassette.currentRenderSpecification())
-        .onAppear(perform: cassetteViewDidAppear)
+        ZStack {
+            Image("background")
+            CassetteView(renderSpec: cassette.currentRenderSpecification())
+            .offset(x: 0, y: -30)
+                .onAppear(perform: cassetteViewDidAppear)
+        }
     }
 
     func cassetteViewDidAppear() {
-        do {
-            try AudioPlayer()
-            //            player?.play()
-        } catch {
-            print(error)
-        }
-
         let startDate = Date()
 
-        Timer.scheduledTimer(withTimeInterval: 1.0 / FPS.default, repeats: true) { (t) in
+        Timer.scheduledTimer(withTimeInterval: 1.0 / FPS.default, repeats: true) { _ in
             let ti = Date().timeIntervalSince(startDate)
-            self.cassette.playbackPosition = ti
+            self.cassette.playbackPosition = ti + 46.minutes
         }
 
-//        cassette.playbackPosition = CassetteDefinition.C90.tapeDuration
-
-//        let cassette = Cassette(type: .C90)
-//        cassette.side = .B
-//        cassette.playbackPosition = 0.minutes
-//        let renderSpec = cassette.currentRenderSpecification()
-//        print(renderSpec.spoolRadiusLeft)
-//        print(renderSpec.spoolRadiusRight)
-//        print(renderSpec.spoolRotationLeft)
-//        print(renderSpec.spoolRotationRight)
-
-        print(cassette.currentRenderSpecification().spoolRadiusLeft)
+//        do {
+//            try AudioPlayer()
+//            //            player?.play()
+//        } catch {
+//            print(error)
+//        }
 
     }
 }

@@ -12,19 +12,25 @@ import SwiftUI
 /// All time units are in seconds
 /// All distance units are in mm
 
+extension CassetteDefinition {
+    var renderThickness: Double {
+        pureThickness * 1.2
+    }
+}
+
 extension Cassette {
     struct RenderSpecification {
-        let spoolRadiusLeft: CGFloat
-        let spoolRadiusRight: CGFloat
+        let spoolMaxRadius: Double
+        let spoolRadiusLeft: Double
+        let spoolRadiusRight: Double
         let spoolRotationLeft: Double
         let spoolRotationRight: Double
     }
 
     func currentRenderSpecification(isFlipped: Bool = false) -> RenderSpecification {
-        let thickness = type.thickness
+        let thickness = type.renderThickness
 
         let percentagePlayed = playbackPosition / type.tapeDuration
-        print("percentagePlayed = \(percentagePlayed)")
 
         let spoolArea = pow(CassetteDefinition.spoolRadius, 2) * .pi
 
@@ -35,6 +41,7 @@ extension Cassette {
         let totalAreaLeft = tapeAreaLeft + spoolArea
         let totalAreaRight = tapeAreaRight + spoolArea
 
+        let maxRadius = sqrt((tapeArea + spoolArea) / .pi)
         let totalRadiusLeft = sqrt(totalAreaLeft / .pi)
         let totalRadiusRight = sqrt(totalAreaRight / .pi)
 
@@ -48,9 +55,10 @@ extension Cassette {
         let tapeRotationRight = tapeLayersRight * .pi * 2
 
         return .init(
-            spoolRadiusLeft: .init(totalRadiusLeft),
-            spoolRadiusRight: .init(totalRadiusRight),
-            spoolRotationLeft: .init(tapeRotationLeft),
-            spoolRotationRight: .init(tapeRotationRight))
+            spoolMaxRadius: maxRadius,
+            spoolRadiusLeft: totalRadiusLeft,
+            spoolRadiusRight: totalRadiusRight,
+            spoolRotationLeft: tapeRotationLeft,
+            spoolRotationRight: tapeRotationRight)
     }
 }

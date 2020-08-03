@@ -23,6 +23,9 @@
 		4AB990C224CAFDED00AF21D5 /* Int+Frames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BC24CAFDED00AF21D5 /* Int+Frames.swift */; };
 		4AB990C324CAFDED00AF21D5 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BD24CAFDED00AF21D5 /* Player.swift */; };
 		4AB990C424CAFDED00AF21D5 /* TimeInterval+Units.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB990BE24CAFDED00AF21D5 /* TimeInterval+Units.swift */; };
+		4AD1965924D346CC00D2E065 /* NSScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1965824D346CC00D2E065 /* NSScreenExtension.swift */; };
+		4AD1967224D7FDAE00D2E065 /* CassetteSpoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1967124D7FDAE00D2E065 /* CassetteSpoolView.swift */; };
+		4AD1967424D809A400D2E065 /* DonutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1967324D809A400D2E065 /* DonutView.swift */; };
 		4AE0653124CEC24700A42A4F /* RenderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */; };
 		4AE0659024CEF07800A42A4F /* Double+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0658F24CEF07800A42A4F /* Double+Distance.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +61,9 @@
 		4AB990BC24CAFDED00AF21D5 /* Int+Frames.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Frames.swift"; sourceTree = "<group>"; };
 		4AB990BD24CAFDED00AF21D5 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		4AB990BE24CAFDED00AF21D5 /* TimeInterval+Units.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Units.swift"; sourceTree = "<group>"; };
+		4AD1965824D346CC00D2E065 /* NSScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSScreenExtension.swift; sourceTree = "<group>"; };
+		4AD1967124D7FDAE00D2E065 /* CassetteSpoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CassetteSpoolView.swift; sourceTree = "<group>"; };
+		4AD1967324D809A400D2E065 /* DonutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutView.swift; sourceTree = "<group>"; };
 		4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderConfiguration.swift; sourceTree = "<group>"; };
 		4AE0658F24CEF07800A42A4F /* Double+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Distance.swift"; sourceTree = "<group>"; };
 		4AE065C024CF4E7A00A42A4F /* YotiFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YotiFoundation.framework; path = ../Carthage/Build/macOS/YotiFoundation.framework; sourceTree = "<group>"; };
@@ -107,9 +113,12 @@
 				4AB9908C24CAFD4B00AF21D5 /* AppDelegate.swift */,
 				4AB9908E24CAFD4B00AF21D5 /* ContentView.swift */,
 				4AB990AF24CAFD8C00AF21D5 /* CassetteView.swift */,
+				4AD1967124D7FDAE00D2E065 /* CassetteSpoolView.swift */,
+				4AD1967324D809A400D2E065 /* DonutView.swift */,
 				4AB990B724CAFDD100AF21D5 /* Cassette.swift */,
 				4AB990B124CAFD9100AF21D5 /* Cassette+RenderSpecification.swift */,
 				4AB990BB24CAFDED00AF21D5 /* Double+Points.swift */,
+				4AD1965824D346CC00D2E065 /* NSScreenExtension.swift */,
 				4AE0658F24CEF07800A42A4F /* Double+Distance.swift */,
 				4AB990BC24CAFDED00AF21D5 /* Int+Frames.swift */,
 				4AB990B524CAFDCB00AF21D5 /* AudioPlayer.swift */,
@@ -275,9 +284,12 @@
 				4AB990B224CAFD9100AF21D5 /* Cassette+RenderSpecification.swift in Sources */,
 				4AB990C224CAFDED00AF21D5 /* Int+Frames.swift in Sources */,
 				4AB9908F24CAFD4B00AF21D5 /* ContentView.swift in Sources */,
+				4AD1967424D809A400D2E065 /* DonutView.swift in Sources */,
+				4AD1965924D346CC00D2E065 /* NSScreenExtension.swift in Sources */,
 				4AB9908D24CAFD4B00AF21D5 /* AppDelegate.swift in Sources */,
 				4AB990C124CAFDED00AF21D5 /* Double+Points.swift in Sources */,
 				4AE0659024CEF07800A42A4F /* Double+Distance.swift in Sources */,
+				4AD1967224D7FDAE00D2E065 /* CassetteSpoolView.swift in Sources */,
 				4AB990B624CAFDCB00AF21D5 /* AudioPlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -3,7 +3,7 @@ import Foundation
 enum CassetteDefinition {
     case C46, C60, C90, C120
 
-    static let spoolRadius = 7.millimeters
+    static let spoolRadius = 10.9.millimeters
     static let spoolDistance = 42.49.millimeters
     static let shellWidth = 100.41.millimeters
     static let shellHeight = 63.8.millimeters
@@ -24,7 +24,7 @@ enum CassetteDefinition {
     /// The thickest tape normally used in cassettes is about 16 µm in thickness, and is used in C60 cassettes and in shorter lengths such as the C46.
     /// C90s are 10 to 11 μm
     /// (the less common) C120s are just 6 μm (0.24 mils) thick, rendering them more susceptible to stretching or breakage
-    var thickness: Double {
+    var pureThickness: Double {
         switch self {
         case .C46, .C60: return 16.micrometers
         case .C90: return 11.2.micrometers
