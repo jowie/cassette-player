@@ -18,6 +18,10 @@ extension CassetteDefinition {
     }
 }
 
+enum RenderError: Error {
+    case tapeAreaLessThanZero
+}
+
 extension Cassette {
     struct RenderSpecification {
         let spoolMaxRadius: Double
@@ -41,6 +45,8 @@ extension Cassette {
         let totalAreaLeft = tapeAreaLeft + spoolArea
         let totalAreaRight = tapeAreaRight + spoolArea
 
+        assert(totalAreaLeft > 0 && totalAreaRight > 0, "Cannot render, tape area less than zero")
+
         let maxRadius = sqrt((tapeArea + spoolArea) / .pi)
         let totalRadiusLeft = sqrt(totalAreaLeft / .pi)
         let totalRadiusRight = sqrt(totalAreaRight / .pi)
@@ -51,8 +57,8 @@ extension Cassette {
         let tapeLayersLeft = tapeRadiusLeft / thickness
         let tapeLayersRight = tapeRadiusRight / thickness
 
-        let tapeRotationLeft = tapeLayersLeft * .pi * 2
-        let tapeRotationRight = tapeLayersRight * .pi * 2
+        let tapeRotationLeft = tapeLayersLeft * .pi * 2 - CassetteDefinition.spoolRotationOffset
+        let tapeRotationRight = tapeLayersRight * .pi * 2 - CassetteDefinition.spoolRotationOffset
 
         return .init(
             spoolMaxRadius: maxRadius,

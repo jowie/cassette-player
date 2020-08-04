@@ -25,7 +25,7 @@ struct ContentView: View {
 
         Timer.scheduledTimer(withTimeInterval: 1.0 / FPS.default, repeats: true) { _ in
             let ti = Date().timeIntervalSince(startDate)
-            self.cassette.playbackPosition = ti + 46.minutes
+            self.cassette.setPlaybackPosition(ti)
         }
 
 //        do {

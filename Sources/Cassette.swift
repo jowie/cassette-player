@@ -7,6 +7,7 @@ enum CassetteDefinition {
     static let spoolDistance = 42.49.millimeters
     static let shellWidth = 100.41.millimeters
     static let shellHeight = 63.8.millimeters
+    static let spoolRotationOffset = 1.1
 
     var pureDuration: TimeInterval {
         switch self {
@@ -48,10 +49,24 @@ public enum CassetteSide {
 
 final class Cassette: ObservableObject {
     let type: CassetteDefinition
-    @Published var playbackPosition = 0.minutes
+    private(set) var playbackPosition = 0.minutes
     var side = CassetteSide.A
+    lazy var playbackRange = 0...type.tapeDuration
 
     public init(type: CassetteDefinition) {
         self.type = type
+    }
+
+    func setPlaybackPosition(_ time: TimeInterval) {
+        playbackPosition = playbackRange.clamp(time)
+        objectWillChange.send()
+    }
+}
+
+extension ClosedRange {
+    func clamp(_ value : Bound) -> Bound {
+        return self.lowerBound > value ? self.lowerBound
+            : self.upperBound < value ? self.upperBound
+            : value
     }
 }
