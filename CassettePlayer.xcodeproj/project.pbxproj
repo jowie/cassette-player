@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A23559824D1775A00612C9F /* YotiFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 4A23559724D1775A00612C9F /* YotiFoundation */; };
+		4A5AB7EB24DC733000349E60 /* PlayerControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5AB7EA24DC733000349E60 /* PlayerControlView.swift */; };
 		4AB9908D24CAFD4B00AF21D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB9908C24CAFD4B00AF21D5 /* AppDelegate.swift */; };
 		4AB9908F24CAFD4B00AF21D5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB9908E24CAFD4B00AF21D5 /* ContentView.swift */; };
 		4AB9909124CAFD4C00AF21D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AB9909024CAFD4C00AF21D5 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		4AD1965924D346CC00D2E065 /* NSScreenExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1965824D346CC00D2E065 /* NSScreenExtension.swift */; };
 		4AD1967224D7FDAE00D2E065 /* CassetteSpoolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1967124D7FDAE00D2E065 /* CassetteSpoolView.swift */; };
 		4AD1967424D809A400D2E065 /* DonutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1967324D809A400D2E065 /* DonutView.swift */; };
+		4AD1974E24D977D400D2E065 /* TimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD1974D24D977D400D2E065 /* TimeView.swift */; };
 		4AE0653124CEC24700A42A4F /* RenderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */; };
 		4AE0659024CEF07800A42A4F /* Double+Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0658F24CEF07800A42A4F /* Double+Distance.swift */; };
 /* End PBXBuildFile section */
@@ -41,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4A5AB7EA24DC733000349E60 /* PlayerControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControlView.swift; sourceTree = "<group>"; };
 		4AB9908924CAFD4B00AF21D5 /* CassettePlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CassettePlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AB9908C24CAFD4B00AF21D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AB9908E24CAFD4B00AF21D5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 		4AD1965824D346CC00D2E065 /* NSScreenExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSScreenExtension.swift; sourceTree = "<group>"; };
 		4AD1967124D7FDAE00D2E065 /* CassetteSpoolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CassetteSpoolView.swift; sourceTree = "<group>"; };
 		4AD1967324D809A400D2E065 /* DonutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutView.swift; sourceTree = "<group>"; };
+		4AD1974D24D977D400D2E065 /* TimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeView.swift; sourceTree = "<group>"; };
 		4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderConfiguration.swift; sourceTree = "<group>"; };
 		4AE0658F24CEF07800A42A4F /* Double+Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Distance.swift"; sourceTree = "<group>"; };
 		4AE065C024CF4E7A00A42A4F /* YotiFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YotiFoundation.framework; path = ../Carthage/Build/macOS/YotiFoundation.framework; sourceTree = "<group>"; };
@@ -111,18 +115,13 @@
 			isa = PBXGroup;
 			children = (
 				4AB9908C24CAFD4B00AF21D5 /* AppDelegate.swift */,
-				4AB9908E24CAFD4B00AF21D5 /* ContentView.swift */,
-				4AB990AF24CAFD8C00AF21D5 /* CassetteView.swift */,
-				4AD1967124D7FDAE00D2E065 /* CassetteSpoolView.swift */,
-				4AD1967324D809A400D2E065 /* DonutView.swift */,
-				4AB990B724CAFDD100AF21D5 /* Cassette.swift */,
-				4AB990B124CAFD9100AF21D5 /* Cassette+RenderSpecification.swift */,
+				4AD1974F24D9D86400D2E065 /* View */,
+				4AD1975224D9D89A00D2E065 /* Model */,
 				4AB990BB24CAFDED00AF21D5 /* Double+Points.swift */,
 				4AD1965824D346CC00D2E065 /* NSScreenExtension.swift */,
 				4AE0658F24CEF07800A42A4F /* Double+Distance.swift */,
 				4AB990BC24CAFDED00AF21D5 /* Int+Frames.swift */,
 				4AB990B524CAFDCB00AF21D5 /* AudioPlayer.swift */,
-				4AB990BD24CAFDED00AF21D5 /* Player.swift */,
 				4AB990BE24CAFDED00AF21D5 /* TimeInterval+Units.swift */,
 				4AE0653024CEC24700A42A4F /* RenderConfiguration.swift */,
 				4AB9909824CAFD4C00AF21D5 /* Info.plist */,
@@ -148,6 +147,29 @@
 				4AB990A424CAFD4C00AF21D5 /* Info.plist */,
 			);
 			path = CassettePlayerTests;
+			sourceTree = "<group>";
+		};
+		4AD1974F24D9D86400D2E065 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4AB9908E24CAFD4B00AF21D5 /* ContentView.swift */,
+				4AD1974D24D977D400D2E065 /* TimeView.swift */,
+				4AB990AF24CAFD8C00AF21D5 /* CassetteView.swift */,
+				4AD1967124D7FDAE00D2E065 /* CassetteSpoolView.swift */,
+				4AD1967324D809A400D2E065 /* DonutView.swift */,
+				4A5AB7EA24DC733000349E60 /* PlayerControlView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4AD1975224D9D89A00D2E065 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4AB990B724CAFDD100AF21D5 /* Cassette.swift */,
+				4AB990B124CAFD9100AF21D5 /* Cassette+RenderSpecification.swift */,
+				4AB990BD24CAFDED00AF21D5 /* Player.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		4AE0653224CEC28D00A42A4F /* Resources */ = {
@@ -279,6 +301,7 @@
 				4AB990B024CAFD8C00AF21D5 /* CassetteView.swift in Sources */,
 				4AE0653124CEC24700A42A4F /* RenderConfiguration.swift in Sources */,
 				4AB990C424CAFDED00AF21D5 /* TimeInterval+Units.swift in Sources */,
+				4AD1974E24D977D400D2E065 /* TimeView.swift in Sources */,
 				4AB990B824CAFDD100AF21D5 /* Cassette.swift in Sources */,
 				4AB990C324CAFDED00AF21D5 /* Player.swift in Sources */,
 				4AB990B224CAFD9100AF21D5 /* Cassette+RenderSpecification.swift in Sources */,
@@ -291,6 +314,7 @@
 				4AE0659024CEF07800A42A4F /* Double+Distance.swift in Sources */,
 				4AD1967224D7FDAE00D2E065 /* CassetteSpoolView.swift in Sources */,
 				4AB990B624CAFDCB00AF21D5 /* AudioPlayer.swift in Sources */,
+				4A5AB7EB24DC733000349E60 /* PlayerControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,33 +32,25 @@ extension Cassette {
     }
 
     func currentRenderSpecification(isFlipped: Bool = false) -> RenderSpecification {
-        let thickness = type.renderThickness
-
         let percentagePlayed = playbackPosition / type.tapeDuration
 
         let spoolArea = pow(CassetteDefinition.spoolRadius, 2) * .pi
 
-        let tapeArea = type.tapeLength * thickness //m squared
+        let tapeArea = type.tapeLength * type.renderThickness //m squared
         let tapeAreaLeft = tapeArea * (1 - percentagePlayed)
         let tapeAreaRight = tapeArea * percentagePlayed
 
-        let totalAreaLeft = tapeAreaLeft + spoolArea
-        let totalAreaRight = tapeAreaRight + spoolArea
+        let totalAreaLeft = spoolArea + tapeAreaLeft
+        let totalAreaRight = spoolArea + tapeAreaRight
 
         assert(totalAreaLeft > 0 && totalAreaRight > 0, "Cannot render, tape area less than zero")
 
-        let maxRadius = sqrt((tapeArea + spoolArea) / .pi)
-        let totalRadiusLeft = sqrt(totalAreaLeft / .pi)
-        let totalRadiusRight = sqrt(totalAreaRight / .pi)
+        let maxRadius = radius(fromArea: tapeArea + spoolArea)
+        let totalRadiusLeft = radius(fromArea: totalAreaLeft)
+        let totalRadiusRight = radius(fromArea: totalAreaRight)
 
-        let tapeRadiusLeft = totalRadiusLeft - CassetteDefinition.spoolRadius
-        let tapeRadiusRight = totalRadiusRight - CassetteDefinition.spoolRadius
-
-        let tapeLayersLeft = tapeRadiusLeft / thickness
-        let tapeLayersRight = tapeRadiusRight / thickness
-
-        let tapeRotationLeft = tapeLayersLeft * .pi * 2 - CassetteDefinition.spoolRotationOffset
-        let tapeRotationRight = tapeLayersRight * .pi * 2 - CassetteDefinition.spoolRotationOffset
+        let tapeRotationLeft = rotation(fromTotalRadius: totalRadiusLeft)
+        let tapeRotationRight = rotation(fromTotalRadius: totalRadiusRight)
 
         return .init(
             spoolMaxRadius: maxRadius,
@@ -67,4 +59,16 @@ extension Cassette {
             spoolRotationLeft: tapeRotationLeft,
             spoolRotationRight: tapeRotationRight)
     }
+
+    func radius(fromArea area: Double) -> Double {
+        sqrt(area / .pi)
+    }
+
+    func rotation(fromTotalRadius radius: Double) -> Double {
+        let tapeRadius = radius - CassetteDefinition.spoolRadius
+        let tapeLayers = tapeRadius / type.renderThickness
+        return tapeLayers * .pi * 2 - CassetteDefinition.spoolRotationOffset
+    }
+
+//    func totalArea(fr)
 }
