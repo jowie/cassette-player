@@ -19,7 +19,8 @@ struct CassetteView: View {
     var body: some View {
         ZStack(alignment: .center) {
             Rectangle()
-                .opacity(0.2)
+                .fill(Color.black)
+                .opacity(0.1)
                 .frame(
                     width: viewModel.shellWidth,
                     height: viewModel.shellHeight,

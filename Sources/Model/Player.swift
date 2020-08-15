@@ -68,4 +68,9 @@ final class Player: ObservableObject {
         timer?.invalidate()
         timer = nil
     }
+
+    func eject() {
+        stop()
+        cassette = nil
+    }
 }
