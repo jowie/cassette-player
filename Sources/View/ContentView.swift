@@ -9,31 +9,36 @@
 import SwiftUI
 import YotiFoundation
 struct ContentView: View {
-    @ObservedObject var viewModel = ViewModel()
+    //@ObservedObject var viewModel = ViewModel()
+    @EnvironmentObject var player: Player
 
     var body: some View {
         ZStack {
             Image("background")
-
-            if viewModel.hasCassette {
-                CassetteView()
+            player.cassette.map {
+                CassetteView(renderSpec: $0.currentRenderSpecification())
                     .offset(x: 0, y: -30)
-                TimeView(time: Player.shared.cassette!.playbackPosition)
-                    .offset(x: 0, y: 15)
-            } else {
-                TimeView(time: 0)
-                    .offset(x: 0, y: 15)
             }
+            TimeView(time: displayTime)
+                .offset(x: 0, y: 15)
 
             PlayerControlView()
                 .offset(x: 0, y: 150)
                 .onAppear(perform: playerViewDidAppear)
+
+            if !hasCassette {
+                Button(action: {
+                    self.insertTape()
+                }) {
+                    Text("INSERT TAPE")
+                }
+                .offset(x: 0, y: -200)
+            }
+
         }
     }
 
     func playerViewDidAppear() {
-        Player.shared.cassette = Cassette(type: .C90)
-
 //        do {
 //            try AudioPlayer()
 //            //            player?.play()
@@ -44,16 +49,27 @@ struct ContentView: View {
     }
 }
 
-extension ContentView {
-    final class ViewModel: ObservableObject {
-        var hasCassette: Bool {
-            Player.shared.cassette != nil
+private extension ContentView {
+    var displayTime: TimeInterval {
+        if let cassette = player.cassette {
+            return cassette.playbackPosition
+        } else {
+            return 0
         }
+    }
+
+    var hasCassette: Bool {
+        return player.cassette != nil
+    }
+
+    func insertTape() {
+        player.cassette = Cassette(type: .C90)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(Player())
     }
 }

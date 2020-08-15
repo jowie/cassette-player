@@ -2,14 +2,12 @@ import Foundation
 import Combine
 
 final class Player: ObservableObject {
-    static let shared = Player()
-
     static let speed = 4.7625.centimeters // per second
 
     var anyCancellable: AnyCancellable?
     var isAutoReverse = false
     var timer: Timer?
-    @Published var state = State.stopped
+    var state = State.stopped
 
     enum State {
         case stopped, playing, forwarding, rewinding
@@ -25,13 +23,13 @@ final class Player: ObservableObject {
     }
 
     func play() {
-        guard cassette != nil, state != .playing else { return }
+        guard let cassette = cassette, state != .playing else { return }
 
         state = .playing
 
-        guard let cassette = cassette, timer == nil else { return }
         let startDate = Date(timeIntervalSinceNow: -cassette.playbackPosition)
 
+        timer?.invalidate()
         timer = .scheduledTimer(withTimeInterval: 1.0 / FPS.default, repeats: true) { _ in
             let ti = Date().timeIntervalSince(startDate)
             cassette.setPlaybackPosition(ti)
@@ -40,6 +38,8 @@ final class Player: ObservableObject {
 
     func fastForward() {
         guard let cassette = cassette else { return }
+
+        state = .forwarding
 
         timer?.invalidate()
         timer = .scheduledTimer(withTimeInterval: 1.0 / FPS.default, repeats: true) { _ in
@@ -52,6 +52,8 @@ final class Player: ObservableObject {
     func rewind() {
         guard let cassette = cassette else { return }
 
+        state = .rewinding
+
         timer?.invalidate()
         timer = .scheduledTimer(withTimeInterval: 1.0 / FPS.default, repeats: true) { _ in
             let renderSpec = cassette.currentRenderSpecification()
@@ -61,6 +63,8 @@ final class Player: ObservableObject {
     }
 
     func stop() {
+        state = .stopped
+
         timer?.invalidate()
         timer = nil
     }

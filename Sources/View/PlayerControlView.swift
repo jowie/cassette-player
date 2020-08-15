@@ -9,23 +9,24 @@
 import SwiftUI
 
 struct PlayerControlView: View {
-    @ObservedObject var viewModel = ViewModel()
+    @EnvironmentObject var player: Player
+    var viewModel = ViewModel()
 
     var body: some View {
         HStack {
-            Button(action: { self.viewModel.play() }) {
+            Button(action: { self.player.play() }) {
                 Text("▶️PLAY")
                     .font(.system(size: 10, weight: .bold, design: Font.Design.monospaced))
             }
-            Button(action: { self.viewModel.rewind() }) {
+            Button(action: { self.player.rewind() }) {
                 Text("⏪REW")
                 .font(.system(size: 10, weight: .bold, design: Font.Design.monospaced))
             }
-            Button(action: { self.viewModel.fastForward() }) {
+            Button(action: { self.player.fastForward() }) {
                 Text("⏩F.FWD")
                 .font(.system(size: 10, weight: .bold, design: Font.Design.monospaced))
             }
-            Button(action: { self.viewModel.stop() }) {
+            Button(action: { self.player.stop() }) {
                 Text("⏹STOP")
                 .font(.system(size: 10, weight: .bold, design: Font.Design.monospaced))
             }
@@ -35,17 +36,18 @@ struct PlayerControlView: View {
 
 extension PlayerControlView {
     final class ViewModel: ObservableObject {
+        @EnvironmentObject var player: Player
         func play() {
-            Player.shared.play()
+            player.play()
         }
         func stop() {
-            Player.shared.stop()
+            player.stop()
         }
         func rewind() {
-            Player.shared.rewind()
+            player.rewind()
         }
         func fastForward() {
-            Player.shared.fastForward()
+            player.fastForward()
         }
     }
 }

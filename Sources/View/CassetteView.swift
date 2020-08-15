@@ -9,7 +9,12 @@
 import SwiftUI
 
 struct CassetteView: View {
-    @ObservedObject var viewModel = ViewModel()
+
+    @ObservedObject var viewModel: ViewModel
+
+    init(renderSpec: Cassette.RenderSpecification) {
+        viewModel = ViewModel(renderSpec: renderSpec)
+    }
     
     var body: some View {
         ZStack(alignment: .center) {
@@ -39,13 +44,18 @@ struct CassetteView: View {
     }
 }
 
+// MARK: - ViewModel
 extension CassetteView {
     final class ViewModel: ObservableObject {
-        var renderSpec: Cassette.RenderSpecification = Player.shared.cassette!.currentRenderSpecification()
+        let scale = RenderConfiguration.currentConfiguration.pointsPerMillimeter
+
+        var renderSpec: Cassette.RenderSpecification
+
+        init(renderSpec: Cassette.RenderSpecification) {
+            self.renderSpec = renderSpec
+        }
 
         let spoolRadius = CGFloat(CassetteDefinition.spoolRadius)
-
-        let scale = RenderConfiguration.currentConfiguration.pointsPerMillimeter
 
         var leftSpoolX: CGFloat {
              -CGFloat(CassetteDefinition.spoolDistance) * scale.width * 0.5
@@ -81,8 +91,10 @@ extension CassetteView {
     }
 }
 
+// MARK: - PreviewProvider
 struct CassetteView_Previews: PreviewProvider {
     static var previews: some View {
-        CassetteView()
+        CassetteView(
+            renderSpec: Cassette(type: .C90).currentRenderSpecification())
     }
 }
