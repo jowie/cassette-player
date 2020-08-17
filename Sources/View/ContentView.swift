@@ -45,13 +45,8 @@ struct ContentView: View {
     }
 
     func playerViewDidAppear() {
-//        do {
-//            try AudioPlayer()
-//            //            player?.play()
-//        } catch {
-//            print(error)
-//        }
-
+        let audioPlayer = AudioPlayer()
+//        audioPlayer.play()
     }
 }
 
